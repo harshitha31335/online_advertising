@@ -7,11 +7,11 @@ import ProductList from './ProductList'
 import DataFetch from './DataFetch'
 import Header from './Header'
 import FetchRegistration from './FetchRegistration'
+import SignUp from './Signup'
 const Home = () => {
   return (
     <div>
-      <FetchRegistration/>
-      
+      <Counter />
     </div>
   )
 }

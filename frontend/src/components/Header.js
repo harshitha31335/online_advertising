@@ -18,15 +18,15 @@ const Header = () => {
         style={{ width: '75px', height: 'auto' }} // Adjust the width as needed
       />
     </Typography>  
-      <Typography variant="h5" sx={{flexGrow:1,color:'white'}}><strong>COUNSELLING AND VISITOR MANAGEMENT SYSTEM</strong></Typography>  
+      <Typography variant="h6" sx={{flexGrow:1,color:'white'}}><strong>COUNSELLING AND VISITOR MANAGEMENT SYSTEM</strong></Typography>  
   
       <Tabs sx={{m1:'auto'}} textColor='inherit' indicatorColor='primary'   
       value={value} onChange={(e,val)=>setValue(val)} >  
         <Tab LinkComponent= {NavLink}to='/signup' label='SignUp'/>   
         <Tab LinkComponent= {NavLink}to='/signin'label='Login'/>   
-        <Tab LinkComponent= {NavLink}to='/counsellor'label='Counsellor'/>   
+        <Tab LinkComponent= {NavLink}to='/councellor'label='Councellor'/>   
         <Tab LinkComponent= {NavLink}to='/appointment'label='Appointment'/>   
-        <Tab LinkComponent= {NavLink}to='/vistor'label='Visitor'/>   
+        <Tab LinkComponent= {NavLink}to='/visitor'label='Visitor'/>   
         <Tab LinkComponent= {NavLink}to='/Contact'label='Contact'/> 
         <Tab LinkComponent= {NavLink}to='/Registration'label='FetchRegistration'/>
       </Tabs>   
