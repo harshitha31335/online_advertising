@@ -32,10 +32,10 @@ function App() {
           <Route path='/signup' element={<Signup />} exact />
           <Route path='/signin' element={<Signin />} exact />
           <Route path='/AddCouncellor' element={<Councellor />} exact />
-          <Route path='/AddVisitor' element={<Visitor />} exact />
+          <Route path='/visitor' element={<Visitor />} exact />
           <Route path='/Appointment' element={<Appointment />} exact />
           <Route path='/Contact' element={<Contact />} exact />
-          <Route path='/FetchRegistration' element={<FetchRegistration />} exact />
+          <Route path='/Registration' element={<FetchRegistration />} exact />
 
           {/* Add the ProductList route */}
           <Route

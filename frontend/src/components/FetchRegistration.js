@@ -2,25 +2,39 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const FetchRegistration = () => {
-    const [res, setRes] = useState(null); // Corrected destructuring of useState
+    const [res, setRes] = useState([])
 
     useEffect(() => {
-        if (res === null) {
-            axios.get('http://localhost:8080/retrieve', {})
+            axios.get('http://localhost:8080/retrieve')
             .then(response => {
-                setRes(response.data); // Corrected setting of state
-                console.log(response.data);
-            })
-            .catch(error => {
-                console.error('Error fetching registration:', error);
-            });
-        }
-    }, [res]); // Ensures the effect runs only once on component mount
+                setRes(response.data)
+                console.log(Response.data)
+            })},
+            [])
 
     return (
-        <div>
-            <h1>Registrations</h1>
-            {JSON.stringify(res)}
+        <div><center><h1>Registrations</h1>
+        <table border={1}>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        {
+            res.map((item,index)=>(
+                <tr key={index}>
+                    <td>{item._id}</td>
+                    <td>{item.name}</td>
+                    <td>{item.role}</td>
+                    <td>{item.email}</td>
+                    <td>{item.password}</td>
+                </tr>
+            ))
+        }
+        </table>
+            </center>
         </div>
     );
 };

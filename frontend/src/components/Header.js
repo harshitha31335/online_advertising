@@ -26,8 +26,9 @@ const Header = () => {
         <Tab LinkComponent= {NavLink}to='/signin'label='Login'/>   
         <Tab LinkComponent= {NavLink}to='/counsellor'label='Counsellor'/>   
         <Tab LinkComponent= {NavLink}to='/appointment'label='Appointment'/>   
-        <Tab LinkComponent= {NavLink}to='/vistor'label='visitor'/>   
+        <Tab LinkComponent= {NavLink}to='/vistor'label='Visitor'/>   
         <Tab LinkComponent= {NavLink}to='/Contact'label='Contact'/> 
+        <Tab LinkComponent= {NavLink}to='/Registration'label='FetchRegistration'/>
       </Tabs>   
       </Toolbar>   
       </AppBar>   
