@@ -13,7 +13,7 @@ import Hello from './components/Hello';
 import ProductList from './components/ProductList';
 import Contact from './components/Contact'; 
 import FetchRegistration from './components/FetchRegistration';
-
+import Data from './components/Data';
 function App() {
 
   return (
@@ -31,6 +31,7 @@ function App() {
           <Route path='/Appointment' element={<Appointment />} exact />
           <Route path='/Contact' element={<Contact />} exact />
           <Route path='/Registration' element={<FetchRegistration />} exact />
+          <Route path='/data' element={<Data />} exact />
         </Routes>
       </main>
     </React.Fragment>

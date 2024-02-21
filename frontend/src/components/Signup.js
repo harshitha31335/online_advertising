@@ -18,6 +18,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
   return (
@@ -37,6 +38,7 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
+  const navigate=useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -54,6 +56,7 @@ export default function SignUp() {
     }).then(res=>{
       console.log(res.data)
     })
+    navigate('/data')
   };
   const [role, setRole] = React.useState('');
 
