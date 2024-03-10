@@ -1,0 +1,61 @@
+/* About Us container */
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* About Us title */
+.about-us-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* About Us content */
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+/* About Us intro */
+.about-us-intro {
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* Paragraphs */
+.about-us-intro p {
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+/* About Us call to action */
+.about-us-call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Call to action heading */
+.about-us-call-to-action h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Call to action button */
+.about-us-call-to-action button {
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}

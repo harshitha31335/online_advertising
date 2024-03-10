@@ -1,17 +1,15 @@
 import React from 'react'
-import Hello from './Hello'
-import Greet from './Greet'
 import Message from './Message'
-import Counter from './Counter'
-import ProductList from './ProductList'
-import DataFetch from './DataFetch'
 import Header from './Header'
 import FetchRegistration from './FetchRegistration'
 import SignUp from './Signup'
+import HomePage from './HomePage'
+import Background from './Background'
 const Home = () => {
   return (
     <div>
-      <Counter />
+      <Background />
+      <HomePage />
     </div>
   )
 }
