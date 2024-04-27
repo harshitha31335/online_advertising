@@ -1,12 +1,10 @@
-/* ContactPage.css */
-
 .contact-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 700px; /* Adjust for responsiveness */
+    max-width: 700px; 
     margin: 0 auto;
     padding: 50px 0;
   }
@@ -113,7 +111,7 @@
   }
   
   .contact-form button:hover {
-    background-color: #0069d9; /* Darker blue button hover */
+    background-color: #0069d9; 
   }
   
   .map-container {
@@ -126,8 +124,7 @@
     border: none;
     border-radius: 5px;
   }
-  
-  /* Responsiveness (adjust as needed) */
+
   @media (max-width: 768px) {
     .contact-container {
       flex-direction: column;
@@ -138,4 +135,9 @@
       flex-basis: 100%;
     }
   }
-  
+  .success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+    

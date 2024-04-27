@@ -94,9 +94,9 @@ function SignUp() {
                     label="Role" 
                     onChange={handleChange} 
                   > 
-                    <MenuItem value={1}>Student</MenuItem> 
-                    <MenuItem value={2}>Faculty</MenuItem> 
-                    <MenuItem value={3}>Admin</MenuItem> 
+                    <MenuItem value={1}>Admin</MenuItem> 
+                    <MenuItem value={2}>Influencer</MenuItem> 
+                    <MenuItem value={3}>Brand Manager</MenuItem> 
                   </Select> 
                 </FormControl> 
               </Grid> 

@@ -1,0 +1,48 @@
+/* InfluencerDashboard.css */
+
+.influencer-dashboard {
+    font-family: Arial, sans-serif;
+  }
+  
+  .influencer-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .influencer-details-table th,
+  .influencer-details-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+  }
+  
+  .influencer-details-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+  .influencer-details-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .influencer-details-table tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .influencer-details-table td button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .influencer-details-table td button:hover {
+    background-color: #45a049;
+  }
+  

@@ -1,61 +1,63 @@
-/* About Us container */
+
+
 .about-us-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  max-width: 700px;
-  margin: 0 auto;
+  padding: 100px 0; 
+  color: #333; 
+  font-family: Arial, sans-serif; 
 }
 
-/* About Us title */
 .about-us-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); 
 }
 
-/* About Us content */
 .about-us-content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px; 
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* About Us intro */
-.about-us-intro {
-  flex: 1;
-  line-height: 1.5;
-}
-
-/* Paragraphs */
-.about-us-intro p {
-  margin-bottom: 1rem;
-  font-size: 16px;
-}
-
-/* About Us call to action */
+.about-us-intro,
 .about-us-call-to-action {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
+  margin-bottom: 30px; 
 }
 
-/* Call to action heading */
-.about-us-call-to-action h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-/* Call to action button */
 .about-us-call-to-action button {
-  padding: 1rem 2rem;
-  background-color: #333;
+  background-color: #4CAF50; 
   color: #fff;
+  padding: 15px 25px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  transition: background-color 0.2s ease-in-out;
 }
+
+.about-us-call-to-action button.scrolled {
+  background-color: #388E3C; 
+}
+
+.scroll-down-indicator {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #333;
+  margin: 0 auto;
+  animation: scrollDown 1s infinite alternate ease-in-out;
+}
+
+@keyframes scrollDown {
+  from { transform: translateY(0); }
+  to { transform: translateY(10px); }
+}
+
+
+@media (max-width: 768

@@ -1,0 +1,48 @@
+/* Example styles */
+
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    top: 100%; /* Position the list below the button */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none; /* Initially hide the list */
+  }
+  
+  .dropdown-menu.open .dropdown-list {
+    display: block; /* Show the list on dropdown open */
+  }
+  
+  .dropdown-list li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .dropdown-list a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown-info {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 5px;
+  }
+  
+  .dropdown-next {
+    /* Style the "Next" button as needed */
+  }
+  

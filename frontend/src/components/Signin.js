@@ -13,15 +13,16 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import MenuItem from '@mui/material/MenuItem'; // Import MenuItem for the role select
+import { createTheme, ThemeProvider } from '@mui/material/styles'; // Import createTheme and ThemeProvider
 
 const defaultTheme = createTheme();
 
 export default function SignIn() {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [formData, setFormData] = useState({ email: '', password: '', role: 'user' });
   const [errorMessage, setErrorMessage] = useState('');
-  const [welcomeMessage, setWelcomeMessage] = useState(''); 
+  const [welcomeMessage, setWelcomeMessage] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -29,8 +30,8 @@ export default function SignIn() {
       const response = await axios.post('http://localhost:8080/signin', formData);
       const { username } = response.data;
 
-      setWelcomeMessage(`Welcome, ${username}!`); 
-      navigate('/', {state:{username}}); 
+      setWelcomeMessage(`Welcome, ${username}!`);
+      navigate('/', { state: { username } });
     } catch (error) {
       setErrorMessage('Invalid email or password');
     }
@@ -87,6 +88,20 @@ export default function SignIn() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+            {/* Select Role */}
+            <TextField
+              select
+              label="Select Role"
+              fullWidth
+              value={formData.role}
+              onChange={handleChange}
+              name="role"
+              margin="normal"
+              required
+            >
+              <MenuItem value="user">User</MenuItem>
+              <MenuItem value="admin">Admin</MenuItem>
+            </TextField>
             <Button
               type="submit"
               fullWidth
@@ -107,8 +122,8 @@ export default function SignIn() {
                 </Link>
               </Grid>
             </Grid>
-            {welcomeMessage && <Typography variant="body1" color="primary">{welcomeMessage}</Typography>} {/* Display welcome message if present */}
-            {errorMessage && <Typography color="error">{errorMessage}</Typography>} {/* Display error message */}
+            {welcomeMessage && <Typography variant="body1" color="primary">{welcomeMessage}</Typography>}
+            {errorMessage && <Typography color="error">{errorMessage}</Typography>}
           </Box>
         </Box>
       </Container>

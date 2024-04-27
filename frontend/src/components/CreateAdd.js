@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
 
-const AdCreation = ({ onAdCreated }) => {
+const CreateAdd = ({ onAdCreated }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
@@ -49,16 +50,21 @@ const AdCreation = ({ onAdCreated }) => {
     }
   }, [isSubmitted, likeImpressions]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const newAd = { title, description, category, price, profileUrl };
     setIsSubmitted(true);
-    onAdCreated(newAd);
-
-    console.log('Ad created with the following data:', newAd);
+  
+    try {
+      await onAdCreated(newAd); 
+      console.log('Ad created successfully!');
+    } catch (error) {
+      console.error('Error creating ad:', error);
+   
+    }
   };
-
+  
   return (
     <div>
       <center>
@@ -149,4 +155,4 @@ const AdCreation = ({ onAdCreated }) => {
   );
 };
 
-export default AdCreation;
+export default CreateAdd;

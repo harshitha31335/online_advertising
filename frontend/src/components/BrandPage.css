@@ -1,0 +1,40 @@
+.brand-page-container {
+    padding: 20px;
+  }
+  
+  .brand-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .brand-item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .brand-image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .brand-details {
+    flex: 1;
+  }
+  
+  .collab-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .request-sent-message {
+    margin-top: 10px;
+    color: green;
+  }
+  
+  /* Add additional styling as needed */
+  

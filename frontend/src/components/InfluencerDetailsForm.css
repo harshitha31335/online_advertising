@@ -1,0 +1,86 @@
+/* InfluencerDashboard.css */
+
+.influencer-dashboard {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.influencer-dashboard h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.influencer-dashboard button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.influencer-dashboard button:hover {
+  background-color: #0056b3;
+}
+
+.influencer-dashboard ul {
+  padding: 0;
+}
+
+.influencer-dashboard li {
+  margin-bottom: 10px;
+}
+
+.influencer-dashboard p {
+  margin-top: 5px;
+}
+
+/* Style for BrandList */
+.brand-list {
+  margin-top: 20px;
+}
+
+.brand-list h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.brand-list ul {
+  padding: 0;
+}
+
+.brand-list li {
+  margin-bottom: 10px;
+}
+
+.brand-list li strong {
+  font-weight: bold;
+}
+
+.brand-list li p {
+  margin-top: 5px;
+}
+
+.brand-list li button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.brand-list li button:hover {
+  background-color: #218838;
+}

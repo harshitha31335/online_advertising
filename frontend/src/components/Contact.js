@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ContactPage.css'; // Import CSS file
 
 const Contact = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Simulate sending data to backend (replace with your actual logic)
+    fetch('your-backend-url', {
+      method: 'POST',
+      body: JSON.stringify({ name: e.target.name.value, feedback: e.target.feedback.value, email: e.target.email.value }),
+    })
+      .then(() => {
+        console.log('Feedback submitted successfully!');
+        setIsSubmitted(true);
+      })
+      .catch((error) => {
+        console.error('Error submitting feedback:', error);
+      });
+  };
+
   return (
     <div className="contact-page">
       <div className="contact-container">
@@ -29,20 +48,23 @@ const Contact = () => {
           </ul>
         </div>
         <div className="contact-form">
-      <h2>Contact Us</h2>
-      <form onSubmit={(e) => e.preventDefault()}> {/* Prevent default form submission */}
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+          <h2>Contact Us</h2>
+          <form onSubmit={handleSubmit}> {/* Update handler to handleSubmit */}
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" required />
 
-        <label htmlFor="feedback">Feedback:</label>
-        <textarea id="feedback" name="feedback" required rows="5"></textarea>
+            <label htmlFor="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" required rows="5"></textarea>
 
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" name="email" required />
 
-        <button type="submit">Send Feedback</button>
-      </form>
-    </div>
+            <button type="submit">Send Feedback</button>
+          </form>
+          {isSubmitted && (
+            <p className="success-message">Your feedback has been sent successfully!</p>
+          )}
+        </div>
         <div className="map-container">
           <h3>Find Us on Google Maps</h3>
           <iframe
